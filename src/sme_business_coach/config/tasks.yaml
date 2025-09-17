@@ -1,26 +1,28 @@
 sme_business_coach_task:
   description: >
-    Provide guidance on improving small businesses in Nigeria.
-    Suggest strategies for increasing sales, adopting digital tools, and managing finances.
+    Provide guidance on improving the following small business in Nigeria: {business_description}.
+    Analyze their specific context and suggest strategies for increasing sales, adopting digital tools, 
+    and managing finances that are relevant to their business type and situation.
   expected_output: >
-    A SME growth plan with marketing tips, financial record-keeping advice,
-    and recommended tools (POS, WhatsApp Business, social media).
+    A tailored SME growth plan with marketing tips, financial record-keeping advice,
+    and recommended tools (POS, WhatsApp Business, social media) specific to the business described.
   agent: sme_business_coach
 
 informal_compliance_helper_task:
   description: >
-    Provide Nigerian business owners with compliance guidance.
-    Cover CAC business name registration, basic tax requirements, and benefits of formalization.
+    Provide the Nigerian business owner described as "{business_description}" with compliance guidance.
+    Consider their business type when explaining CAC business name registration, basic tax requirements, 
+    and benefits of formalization.
   expected_output: >
     A compliance guide that explains steps, costs, and benefits
-    of registering a small business in Nigeria.
+    of registering their specific type of small business in Nigeria.
   agent: informal_compliance_helper
 
 business_aggregator_task:
   description: >
-    Organize outputs into a single report with sections:
-    Business Growth, Compliance. Tailor everything for Nigerian SMEs.
+    Organize outputs into a single report for the business: "{business_description}".
+    Create sections for Business Growth and Compliance, tailoring everything for this specific Nigerian SME.
   expected_output: >
-    A Markdown report titled 'SME Growth & Opportunity Plan (Nigeria)'
-    with clear recommendations in each section.
+    A Markdown report titled 'SME Growth & Opportunity Plan for [Business Name/Type]'
+    with clear, specific recommendations for the business described.
   agent: business_aggregator

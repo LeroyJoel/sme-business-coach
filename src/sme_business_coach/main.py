@@ -17,13 +17,16 @@ def run():
     """
     Run the crew.
     """
+    # Example business description for testing
     inputs = {
-        'topic': 'AI LLMs',
+        'business_description': 'A small electronics repair shop in Lagos that wants to expand online and formalize their business',
         'current_year': str(datetime.now().year)
     }
     
     try:
-        SmeBusinessCoach().crew().kickoff(inputs=inputs)
+        result = SmeBusinessCoach().crew().kickoff(inputs=inputs)
+        print("Crew execution completed successfully!")
+        return result
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
@@ -33,7 +36,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs",
+        "business_description": "A small retail clothing store in Abuja looking to improve sales and go digital",
         'current_year': str(datetime.now().year)
     }
     try:
@@ -57,7 +60,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs",
+        "business_description": "A food truck business in Port Harcourt wanting to register with CAC and grow their customer base",
         "current_year": str(datetime.now().year)
     }
     
@@ -66,3 +69,6 @@ def test():
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")
+
+if __name__ == "__main__":
+    run()
